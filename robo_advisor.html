@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                 <a href="{{ url_for('index') }} class="pic"><img src="{{ url_for('static', filename='logo.jpg') }}" alt="Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('robo_advisor') }}">Robo Advisor</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="form-container">
+        <h1>Investment Form</h1>
+        <form action="{{ url_for('result') }}" method="post">
+            <label for="amount">Amount to Invest:</label>
+            <input type="number" id="amount" name="amount" placeholder="Enter amount" required>
+            
+            <label for="period">Period of Investment (in years):</label>
+            <input type="number" id="period" name="period" placeholder="Enter period" required>
+            
+            <label for="risk">Risk Tolerance Level:</label>
+            <select id="risk" name="risk" required>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+            </select>
+            
+            <label for="expected-returns">Expected Returns:</label>
+            <input type="text" id="expected-returns" name="expected-returns" placeholder="Enter expected returns" required>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

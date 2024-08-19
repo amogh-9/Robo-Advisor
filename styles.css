@@ -1,0 +1,231 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #E2E2B6; /* Light Background Color */
+    color: #021526; /* Dark Text Color */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    flex-direction: column;
+}
+
+/* Navbar Styling */
+.navbar {
+    width: 100%;
+    background-color: #021526; /* Dark Blue Background */
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.logo a img {
+    height: 50px; /* Adjust height for responsiveness */
+    width: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    color: #E2E2B6; /* Light Text Color */
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #03346E; /* Medium Blue Background */
+    border-radius: 5px;
+}
+
+/* Form Container Styling */
+.form-container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    margin-top: 120px; /* Adjusted for fixed navbar height */
+}
+
+.form-container h1 {
+    margin-bottom: 1.5rem;
+    color: #03346E; /* Medium Blue Text Color */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input, select {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+}
+
+button {
+    background-color: #6EACDA; /* Light Blue Button Background */
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #03346E; /* Medium Blue Button Background */
+}
+
+/* Content Container Styling */
+.content-container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    margin-top:300px; /* Adjusted for fixed navbar height */
+}
+
+.content-container h1 {
+    margin-bottom: 1.5rem;
+    color: #03346E; /* Medium Blue Text Color */
+}
+
+.content-container h3 {
+    margin-top: 1rem; /* Ensure consistent spacing between sections */
+    color: #203046;
+    text-align: left;
+}
+
+.content-container p {
+    margin-bottom: 1rem; /* Spacing between paragraphs */
+    line-height: 1.6; /* Improve readability */
+    text-align: justify;
+}
+
+.custom-bullets {
+    list-style-type: disc;
+    padding-left: 20px; /* Adjust indentation */
+    margin-bottom: 1.5rem;
+    text-align: left; /* Align bullets with text */
+}
+
+
+.content-container p {
+    margin-bottom: 1rem;
+    color: #021526; /* Dark Text Color */
+}
+
+.plot-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.plot-container img {
+    max-width: 400px; /* Set a smaller maximum width for the plot */
+    width: 100%; /* Ensure the image takes up available space without exceeding max-width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Loading animation styles */
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+.loading-animation {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .logo a img {
+        height: 50px; /* Smaller logo size for small screens */
+    }
+
+    .form-container, .content-container {
+        width: 100%;
+        margin-top: 2rem; /* Less margin on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo a img {
+        height: 40px; /* Even smaller logo size for very small screens */
+    }
+
+    .form-container, .content-container {
+        padding: 1rem; /* Less padding for very small screens */
+    }
+}

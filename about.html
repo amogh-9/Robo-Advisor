@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Portfolio Optimization</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='logo.jpg') }}" alt="Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('robo_advisor') }}">Robo Advisor</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="content-container">
+        <h1>About Portfolio Optimization</h1>
+
+        <h3 class="sub-head">Our Mission</h3>
+        <p>We aim to democratize investing by providing a low-cost solution that is accessible to everyone, regardless of their financial background or experience.</p>
+
+        <h3 class="sub-head">Technology Overview</h3>
+        <p>Our platform uses cutting-edge algorithms to analyze historical data and market trends, delivering personalized investment recommendations tailored to your risk tolerance and financial goals.</p>
+
+        <h3 class="sub-head">How It Works</h3>
+        <ul class="custom-bullets">
+            <li>Start by answering a few questions about your financial situation and risk tolerance.</li>
+            <li>Our Robo-advisor then analyzes your profile to recommend a diversified portfolio of assets.</li>
+            <li>Your portfolio is automatically rebalanced to maintain your desired risk profile.</li>
+        </ul>
+
+        <h3 style="text-align:center">Key Features:</h3>
+        <h3>Modern Portfolio Optimization</h3>
+        <p>We leverage Modern Portfolio Theory to create optimal portfolios that balance risk and return effectively.</p>
+
+        <h3>Data-Driven Insights</h3>
+        <p>Our decisions are backed by rigorous analysis of historical data, ensuring informed investment choices.</p>
+
+        <h3>Interactive Visualization Tools</h3>
+        <p>Our platform offers advanced visualization tools that help you easily understand and monitor your portfolio's performance.</p>
+    </div>
+</body>
+</html>
