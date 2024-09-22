@@ -3,9 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investment Form</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Home - Stock Market Portfolio Creator</title>
     
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+            background-color: #021526;
+            color: #fff;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .navbar .logo img {
+            height: 50px;
+        }
+
+        .navbar .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .navbar .nav-links li {
+            margin: 0 15px;
+        }
+
+        .navbar .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .navbar .nav-links a:hover {
+            color: #3498db;
+        }
+
+        .hero {
+            background-color: #021526;
+            color: #fff;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 2rem;
+            margin-top: 5rem; /* Adjusted for the fixed navbar */
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .section, .call-to-action {
+            padding: 4rem 2rem;
+            text-align: center;
+            background-color: #ffffff;
+            color: #021526;
+        }
+
+        .section .container, .call-to-action .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section h2, .call-to-action h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .section p, .call-to-action p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin: 0 auto;
+        }
+
+        .features {
+            background-color: #ffffff;
+            padding: 4rem 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature {
+            background-color: #f4f4f4;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .feature h3 {
+            color: #021526;
+            margin-top: 0;
+        }
+
+        .call-to-action {
+            background-color: #021526;
+            color: #fff;
+        }
+
+        .call-to-action a {
+            background-color: #3498db;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 1.2rem;
+            display: inline-block;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .call-to-action a:hover {
+            background-color: #2980b9;
+        }
+
+        .footer {
+            background-color: #021526;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar .nav-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navbar .nav-links li {
+                margin: 0.5rem 0;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .feature {
+                max-width: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section p {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -17,13 +200,48 @@
                 <li><a href="{{ url_for('index') }}">Home</a></li>
                 <li><a href="{{ url_for('about') }}">About</a></li>
                 <li><a href="{{ url_for('robo_advisor') }}">Robo Advisor</a></li>
-               
             </ul>
         </div>
     </nav>
 
-    
+    <section class="hero">
+        <div>
+            <h1>Welcome to Robo Advisor</h1>
+        </div>
+    </section>
 
-   
+    <section class="section">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <p>Our platform helps you create a personalized investment portfolio with ease. Utilize advanced algorithms to make informed investment decisions. Whether you're a seasoned investor or a beginner, we provide the tools you need to optimize your investments and achieve your financial goals.</p>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <h3>Advanced Analytics</h3>
+            <p>Leverage powerful analytics to understand market trends and make data-driven decisions.</p>
+        </div>
+        <div class="feature">
+            <h3>User Friendly</h3>
+            <p>Experience a seamless and intuitive investment journey with our user-friendly platform, designed to make portfolio creation and management effortless for all users.</p>
+        </div>
+        <div class="feature">
+            <h3>Personalized Portfolios</h3>
+            <p>Create and manage portfolios tailored to your investment strategy and risk tolerance.</p>
+        </div>
+    </section>
+
+    <section class="call-to-action">
+        <div class="container">
+            <h2>Ready to Get Started?</h2>
+            <p>Start building your ideal investment portfolio with our easy-to-use platform.</p>
+            <a href="{{ url_for('robo_advisor') }}">Get Started</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Stock Market Portfolio Creator. All rights reserved.</p>
+    </footer>
 </body>
 </html>
